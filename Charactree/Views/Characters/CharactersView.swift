@@ -36,7 +36,8 @@ struct CharactersView: View {
                     }
                 }
             }
-            .padding()
+            .padding(.horizontal)
+            .padding(.bottom)
             .navigationTitle(book.title)
             .navigationBarTitleDisplayMode(.large)
             .sheet(isPresented: $showingAddCharacterSheet) { AddCharacterSheet(book: book) }

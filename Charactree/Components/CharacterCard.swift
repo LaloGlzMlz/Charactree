@@ -9,23 +9,14 @@ import SwiftUI
 
 
 struct CharacterCard: View {
+    @Environment(\.modelContext) private var context
+    
+    @State private var isEditing = false
+    
     let character: BookCharacter
     
     var body: some View {
         ZStack {
-            
-//            RoundedRectangle(cornerRadius: 20)
-//                .shadow(radius: 2)
-//                .frame(height: 150)
-//                .foregroundStyle(.gray)
-//                .offset(x: 10, y: 10)
-//                .opacity(0.2)
-//            
-//            RoundedRectangle(cornerRadius: 20)
-//                .frame(height: 150)
-//                .foregroundStyle(.gray)
-//                .offset(x: 5, y: 5)
-//                .opacity(0.2)
             
             RoundedRectangle(cornerRadius: 20)
                 .frame(height: 150)
@@ -66,6 +57,18 @@ struct CharacterCard: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.leading,30)
         }
+        .contextMenu(ContextMenu(menuItems: {
+            Button("Edit") {
+                isEditing = true
+            }
+            
+            Button("Delete", role: .destructive) {
+                context.delete(character)
+            }
+        }))
+        .sheet(isPresented: $isEditing, content: {
+            UpdateCharacterView(character: character)
+        })
 //        .padding()
     }
     
