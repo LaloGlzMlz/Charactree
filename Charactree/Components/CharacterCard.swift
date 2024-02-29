@@ -51,7 +51,7 @@ struct CharacterCard: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .bold()
                         .padding(.leading, 15)
-                    Text(character.desc)
+                    Text(character.characterTitle)
                         .foregroundStyle(.white)
                         .font(.body)
                         .frame(maxWidth: .infinity, alignment: .leading)

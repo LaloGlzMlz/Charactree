@@ -33,11 +33,19 @@ struct UpdateCharacterView: View {
                     }
                     
                     LabeledContent {
-                        TextField("Character description", text: $character.desc)
+                        TextField("Character description", text: $character.characterTitle)
                             .textInputAutocapitalization(.sentences)
                     } label: {
                       Text("Description")
                             .padding(.trailing, 70)
+                    }
+                    
+                    LabeledContent {
+                        TextField("Notes", text: $character.notes,  axis: .vertical)
+                            .lineLimit(5...10)
+                    } label: {
+                        Text("Notes")
+                            .padding(.trailing, 50)
                     }
                 }
                 
@@ -59,9 +67,6 @@ struct UpdateCharacterView: View {
                       Text("Icon")
                             .padding(.trailing)
                     }
-//                    ForEach(filteredConnections) { filtered in
-//                        Text(filtered.relatedCharacter)
-//                    }
                 }
             }
             .navigationTitle("Editing \(character.name)")
