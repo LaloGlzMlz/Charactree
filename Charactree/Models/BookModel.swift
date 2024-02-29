@@ -1,0 +1,28 @@
+//
+//  BookModel.swift
+//  Charactree
+//
+//  Created by Eduardo Gonzalez Melgoza on 29/02/24.
+//
+
+import Foundation
+import SwiftData
+
+
+
+@Model
+final class Book : Identifiable {
+    var title: String = ""
+    var author: String = ""
+    var bookColor: String = ""
+    var icon: String = ""
+    var dateCreated: Date
+    
+    init(title: String, author: String, bookColor: String, icon: String, dateCreated: Date) {
+        self.title = title
+        self.author = author
+        self.bookColor = bookColor
+        self.icon = icon
+        self.dateCreated = dateCreated
+    }
+}
