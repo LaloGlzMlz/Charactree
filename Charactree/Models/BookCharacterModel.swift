@@ -13,14 +13,16 @@ import SwiftData
 @Model
 final class BookCharacter : Identifiable {
     var name: String = ""
-    var desc: String = ""
+    var characterTitle: String = ""
+    var notes: String = ""
     var book: String = ""
     var characterColor: String = ""
     var icon: String = ""
     
-    init(name: String, desc: String, book: String, characterColor: String, icon: String) {
+    init(name: String, characterTitle: String, notes: String, book: String, characterColor: String, icon: String) {
         self.name = name
-        self.desc = desc
+        self.characterTitle = characterTitle
+        self.notes = notes
         self.book = book
         self.characterColor = characterColor
         self.icon = icon
