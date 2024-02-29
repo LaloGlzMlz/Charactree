@@ -37,6 +37,7 @@
 		2E188B5B2B908EA8001D97B3 /* SymbolIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E188B5A2B908EA8001D97B3 /* SymbolIcon.swift */; };
 		2E188B5D2B908EBA001D97B3 /* SymbolLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E188B5C2B908EBA001D97B3 /* SymbolLoader.swift */; };
 		2E188B5F2B908ECC001D97B3 /* SymbolsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E188B5E2B908ECC001D97B3 /* SymbolsPicker.swift */; };
+		2EC754422B90965A003F4016 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC754412B90965A003F4016 /* CharacterDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		2E188B5A2B908EA8001D97B3 /* SymbolIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolIcon.swift; sourceTree = "<group>"; };
 		2E188B5C2B908EBA001D97B3 /* SymbolLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolLoader.swift; sourceTree = "<group>"; };
 		2E188B5E2B908ECC001D97B3 /* SymbolsPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolsPicker.swift; sourceTree = "<group>"; };
+		2EC754412B90965A003F4016 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				2E188B352B908C02001D97B3 /* CharacterListView.swift */,
 				2E188B372B908C26001D97B3 /* CharactersView.swift */,
 				2E188B392B908C3D001D97B3 /* UpdateCharacterView.swift */,
+				2EC754412B90965A003F4016 /* CharacterDetailView.swift */,
 			);
 			path = Characters;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				2E188B542B908E04001D97B3 /* ColorExtension.swift in Sources */,
 				2E188B492B908D79001D97B3 /* BookListCell.swift in Sources */,
 				2E188B2A2B9089C0001D97B3 /* ConnectionModel.swift in Sources */,
+				2EC754422B90965A003F4016 /* CharacterDetailView.swift in Sources */,
 				2E188B4B2B908D92001D97B3 /* CharacterCard.swift in Sources */,
 				2E188B282B9089A0001D97B3 /* BookCharacterModel.swift in Sources */,
 				2E188B562B908E19001D97B3 /* UtilityFunctions.swift in Sources */,

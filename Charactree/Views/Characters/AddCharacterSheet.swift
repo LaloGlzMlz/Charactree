@@ -15,7 +15,8 @@ struct AddCharacterSheet: View {
     @Environment(\.dismiss) private var dismiss
     
     @State private var name: String = ""
-    @State private var desc: String = ""
+    @State private var characterTitle: String = ""
+    @State private var notes: String = ""
     @State private var characterColor = Color.blue
     @State private var characterColorString = ""
     @State private var icon = "person.fill"
@@ -31,14 +32,22 @@ struct AddCharacterSheet: View {
                             .textInputAutocapitalization(.words)
                     } label: {
                       Text("Name")
-                            .padding(.trailing, 94)
+                            .padding(.trailing, 50)
                     }
                     
                     LabeledContent {
-                        TextField("Character description", text: $desc)
+                        TextField("Character title", text: $characterTitle)
                             .textInputAutocapitalization(.sentences)
                     } label: {
-                        Text("Description")
+                        Text("Title")
+                            .padding(.trailing, 61)
+                    }
+                    
+                    LabeledContent {
+                        TextField("Notes", text: $notes,  axis: .vertical)
+                            .lineLimit(1...10)
+                    } label: {
+                        Text("Notes")
                             .padding(.trailing, 50)
                     }
                 }
@@ -84,7 +93,8 @@ struct AddCharacterSheet: View {
                         self.characterColorString = self.convertColorToString(bookColor:characterColor)
                         let character = BookCharacter (
                             name: name,
-                            desc: desc,
+                            characterTitle: characterTitle,
+                            notes: notes,
                             book: book.title,
                             characterColor: characterColorString,
                             icon: icon
