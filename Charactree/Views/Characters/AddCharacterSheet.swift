@@ -45,7 +45,7 @@ struct AddCharacterSheet: View {
                     
                     LabeledContent {
                         TextField("Notes", text: $notes,  axis: .vertical)
-                            .lineLimit(5...10)
+                            .lineLimit(1...10)
                     } label: {
                         Text("Notes")
                             .padding(.trailing, 50)

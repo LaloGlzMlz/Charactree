@@ -29,20 +29,20 @@ struct UpdateCharacterView: View {
                             .textInputAutocapitalization(.words)
                     } label: {
                       Text("Name")
-                            .padding(.trailing, 114)
+                            .padding(.trailing, 50)
                     }
                     
                     LabeledContent {
-                        TextField("Character description", text: $character.characterTitle)
+                        TextField("Character title", text: $character.characterTitle)
                             .textInputAutocapitalization(.sentences)
                     } label: {
-                      Text("Description")
-                            .padding(.trailing, 70)
+                      Text("Title")
+                            .padding(.trailing, 61)
                     }
                     
                     LabeledContent {
                         TextField("Notes", text: $character.notes,  axis: .vertical)
-                            .lineLimit(5...10)
+                            .lineLimit(1...10)
                     } label: {
                         Text("Notes")
                             .padding(.trailing, 50)

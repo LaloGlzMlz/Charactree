@@ -15,8 +15,8 @@ struct CharactersView: View {
     @Query(sort: \BookCharacter.name) var characters: [BookCharacter]
     
     @State private var showingAddCharacterSheet = false
-    @State private var showingCharacterListSheet = false
     @State private var filteredCharacters: [BookCharacter] = []
+    @State private var isEditing = false
     
     let book: Book
     
@@ -43,10 +43,7 @@ struct CharactersView: View {
             .toolbar {
                 if !characters.isEmpty {
                     Button("Edit") {
-                        showingCharacterListSheet.toggle()
-                    }
-                    .sheet(isPresented: $showingCharacterListSheet) {
-                        CharacterListView(book: book)
+                        isEditing.toggle()
                     }
                     Button(action: {
                         showingAddCharacterSheet = true
@@ -56,6 +53,9 @@ struct CharactersView: View {
                     }
                 }
             }
+            .sheet(isPresented: $isEditing, content: {
+                UpdateBookView(book: book)
+            })
             .overlay {
                 if !characters.contains(where: { $0.book == book.title }) {
                     ContentUnavailableView(label: {
