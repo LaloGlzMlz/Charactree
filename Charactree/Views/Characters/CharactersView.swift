@@ -29,8 +29,8 @@ struct CharactersView: View {
                 LazyVGrid(columns: columnLayout) {
                     ForEach(characters) { character in
                         if character.book == book.title {
-                            NavigationLink(destination: ConnectionsView(character: character, book: book)) {
-                                    CharacterCard(character: character)
+                            NavigationLink(destination: CharacterDetailView(character: character, book: book)) {
+                                CharacterCard(character: character)
                             }
                         }
                     }
