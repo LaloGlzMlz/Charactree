@@ -9,6 +9,10 @@ import SwiftUI
 import SwiftData
 
 struct BookCard: View {
+    @Environment(\.modelContext) private var context
+    
+    @State private var isEditing = false
+    
     let book: Book
     
     var body: some View {
@@ -74,6 +78,18 @@ struct BookCard: View {
             .padding(.leading,30)
         }
         .padding()
+        .contextMenu(ContextMenu(menuItems: {
+            Button("Edit") {
+                isEditing = true
+            }
+            
+            Button("Delete", role: .destructive) {
+                context.delete(book)
+            }
+        }))
+        .sheet(isPresented: $isEditing, content: {
+            UpdateBookView(book: book)
+        })
     }
     
     func convertStringToColor(bookColorString: String) -> Color {
