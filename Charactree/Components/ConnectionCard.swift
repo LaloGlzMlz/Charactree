@@ -15,14 +15,8 @@ struct ConnectionCard: View {
     
     var body: some View {
         ZStack {
-//            RoundedRectangle(cornerRadius: 25)
-//                    .frame(height: 150)
-//                    .foregroundColor(Color.black.opacity(0.15))
-//                    .offset(x: 10, y: 10)
-            
             RoundedRectangle(cornerRadius: 20)
                 .shadow(radius: 3)
-                .frame(height: 150)
                 .foregroundStyle(LinearGradient(
                     gradient: Gradient(stops: [
                         .init(color: convertStringToColor(bookColorString: character.characterColor), location: 0.0),
@@ -34,7 +28,7 @@ struct ConnectionCard: View {
             
             HStack {
                 Image(systemName: character.icon)
-                    .font(.system(size: 62))
+                    .font(.system(size: 40))
                     .opacity(0.7)
                     .foregroundStyle(.white)
                 VStack {
@@ -54,9 +48,9 @@ struct ConnectionCard: View {
                 }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.leading,30)
+            .padding()
         }
-        .padding()
+        .padding(.horizontal)
     }
     
     
