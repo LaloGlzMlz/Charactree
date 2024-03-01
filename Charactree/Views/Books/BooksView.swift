@@ -22,8 +22,8 @@ struct BooksView: View {
         let plusImage = Image(systemName: "plus").resizable()
         
         NavigationStack {
-            ScrollView {
-                LazyVGrid(columns: columnLayout) {
+            ScrollView(.horizontal) {
+                LazyHStack(spacing: 2) {
                     ForEach(books) { book in
                         NavigationLink(destination: CharactersView(book: book)) {
                             AltBookCard(book: book)
