@@ -12,7 +12,7 @@ import Foundation
 struct CharacterDetailView: View {
     @State private var isEditing = false
     
-    let character: BookCharacter
+    @Bindable var character: BookCharacter
     let book: Book
     
     var body: some View {
@@ -23,14 +23,14 @@ struct CharacterDetailView: View {
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .padding(.bottom)
                 .padding(.horizontal)
-            Text(character.notes)
+            
+            TextField("Notes", text: $character.notes,  axis: .vertical)
+                .lineLimit(1...10)
                 .padding()
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .multilineTextAlignment(.leading)
         }
-//        .padding()
         .navigationTitle(character.name)
-        .navigationBarTitleDisplayMode(.large)
         .toolbar {
             Button("Edit") {
                 isEditing = true
