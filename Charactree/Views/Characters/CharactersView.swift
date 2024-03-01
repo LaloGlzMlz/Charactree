@@ -39,7 +39,6 @@ struct CharactersView: View {
             .padding(.horizontal)
             .padding(.bottom)
             .navigationTitle(book.title)
-            .navigationBarTitleDisplayMode(.large)
             .sheet(isPresented: $showingAddCharacterSheet) { AddCharacterSheet(book: book) }
             .toolbar {
                 if !characters.isEmpty {
