@@ -33,7 +33,6 @@ struct AddConnectionSheet: View {
         NavigationStack {
             Form {
                 Section {
-                    
                     Picker("Select a character that is related to \(character.name)", selection: $selectedOption) {
                         ForEach(filteredCharacters) { character in
                             Text(character.name).tag(character.name)
@@ -64,21 +63,7 @@ struct AddConnectionSheet: View {
                                 .padding(.trailing, 50)
                         }
                     }
-
                 }
-//                Section {
-//                    Text("\(character.name) ").bold() +
-//                    Text("is ") +
-//                    Text("\(selectedOption)").bold() +
-//                    Text("'s ") +
-//                    Text("\(otherWayConnectionType)").bold() +
-//                    Text(", and ") +
-//                    Text("\(selectedOption) ").bold() +
-//                    Text("is ") +
-//                    Text("\(character.name)").bold() +
-//                    Text("'s ") +
-//                    Text("\(isTo.lowercased())").bold()
-//                }
             }
             .onAppear {
                 // Obtain only characters who's book equals the book tapped in the beginning

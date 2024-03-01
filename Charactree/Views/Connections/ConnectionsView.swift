@@ -31,6 +31,7 @@ struct ConnectionsView: View {
                         ForEach(allCharacters) { characterFromAll in
                             if connection.relatedCharacter == characterFromAll.name {
                                 ConnectionCard(book: book, character: characterFromAll, connection: connection)
+                                    .padding(.horizontal)
                             }
                         }
                     }

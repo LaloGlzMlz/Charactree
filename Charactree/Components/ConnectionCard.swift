@@ -9,6 +9,8 @@ import SwiftUI
 
 
 struct ConnectionCard: View {
+    @Environment(\.modelContext) private var context
+    
     let book: Book
     let character: BookCharacter // character to send: connected character
     let connection: Connection
@@ -50,7 +52,18 @@ struct ConnectionCard: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding()
         }
-        .padding(.horizontal)
+        .contextMenu(ContextMenu(menuItems: {
+//            Button("Edit") {
+//                isEditing = true
+//            }
+            
+            Button("Delete connection with \(character.name)", role: .destructive) {
+                context.delete(connection)
+            }
+        }))
+//        .sheet(isPresented: $isEditing, content: {
+//            UpdateBookView(book: book)
+//        })
     }
     
     
