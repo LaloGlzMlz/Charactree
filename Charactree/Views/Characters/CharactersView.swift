@@ -31,12 +31,12 @@ struct CharactersView: View {
                         if character.book == book.title {
                             NavigationLink(destination: CharacterDetailView(character: character, book: book)) {
                                 CharacterCard(character: character)
+                                    .padding(.horizontal)
                             }
                         }
                     }
                 }
             }
-            .padding(.horizontal)
             .padding(.bottom)
             .sheet(isPresented: $showingAddCharacterSheet) { AddCharacterSheet(book: book) }
             .toolbar {

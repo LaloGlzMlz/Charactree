@@ -70,7 +70,7 @@ struct AddConnectionSheet: View {
                 filteredCharacters = characters.filter{$0.book == book.title}
                 selectedOption = filteredCharacters[0].name
             }
-            .navigationTitle("New connection")
+            .navigationTitle(character.name)
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItemGroup(placement: .topBarLeading) {

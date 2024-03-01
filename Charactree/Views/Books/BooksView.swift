@@ -22,32 +22,48 @@ struct BooksView: View {
         let plusImage = Image(systemName: "plus").resizable()
         
         NavigationStack {
-            ScrollView(.horizontal) {
-                LazyHStack(spacing: 2) {
-                    ForEach(books) { book in
-                        NavigationLink(destination: CharactersView(book: book)) {
-                            AltBookCard(book: book)
+            ScrollView {
+                VStack {
+                    ScrollView(.horizontal) {
+                        LazyHStack(spacing: 2) {
+                            ForEach(books) { book in
+                                NavigationLink(destination: CharactersView(book: book)) {
+                                    AltBookCard(book: book)
+                                }
+                            }
+                        }
+                    }
+                    
+                    ScrollView(.horizontal) {
+                        LazyHStack(spacing: 2) {
+                            ForEach(books) { book in
+                                NavigationLink(destination: CharactersView(book: book)) {
+                                    AltBookCard(book: book)
+                                }
+                            }
                         }
                     }
                 }
-            }
-            .navigationBarTitleDisplayMode(.large)
-            .sheet(isPresented: $showingAddBookSheet) { AddBookSheet() }
-            .toolbar {
-                if !books.isEmpty {
-                    Button("Edit") {
-                        showingBooksListSheet.toggle()
-                    }
-                    .sheet(isPresented: $showingBooksListSheet) {
-                        BookListView()
-                    }
-                    Button(action: {
-                        showingAddBookSheet = true
-                    }) {
-                        plusImage
-                            .frame(width: 18, height: 18)
+                .navigationTitle("Books")
+                .navigationBarTitleDisplayMode(.large)
+                .sheet(isPresented: $showingAddBookSheet) { AddBookSheet() }
+                .toolbar {
+                    if !books.isEmpty {
+                        Button("Edit") {
+                            showingBooksListSheet.toggle()
+                        }
+                        .sheet(isPresented: $showingBooksListSheet) {
+                            BookListView()
+                        }
+                        Button(action: {
+                            showingAddBookSheet = true
+                        }) {
+                            plusImage
+                                .frame(width: 18, height: 18)
+                        }
                     }
                 }
+                
             }
             .overlay {
                 if books.isEmpty {
@@ -62,6 +78,5 @@ struct BooksView: View {
                 }
             }
         }
-        .navigationTitle("Books")
     }
 }
