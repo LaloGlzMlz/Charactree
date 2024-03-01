@@ -26,12 +26,11 @@ struct BooksView: View {
                 LazyVGrid(columns: columnLayout) {
                     ForEach(books) { book in
                         NavigationLink(destination: CharactersView(book: book)) {
-                            BookCard(book: book)
+                            AltBookCard(book: book)
                         }
                     }
                 }
             }
-            .padding()
             .navigationTitle("Books")
             .navigationBarTitleDisplayMode(.large)
             .sheet(isPresented: $showingAddBookSheet) { AddBookSheet() }
