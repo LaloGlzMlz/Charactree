@@ -38,7 +38,6 @@ struct CharactersView: View {
             }
             .padding(.horizontal)
             .padding(.bottom)
-            .navigationTitle(book.title)
             .sheet(isPresented: $showingAddCharacterSheet) { AddCharacterSheet(book: book) }
             .toolbar {
                 if !characters.isEmpty {
@@ -69,6 +68,7 @@ struct CharactersView: View {
                 }
             }
         }
+        .navigationTitle(book.title)
         .onAppear {
             filteredCharacters = characters.filter{$0.book == book.title}
         }

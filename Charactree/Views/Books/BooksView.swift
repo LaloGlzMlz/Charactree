@@ -31,7 +31,6 @@ struct BooksView: View {
                     }
                 }
             }
-            .navigationTitle("Books")
             .navigationBarTitleDisplayMode(.large)
             .sheet(isPresented: $showingAddBookSheet) { AddBookSheet() }
             .toolbar {
@@ -63,5 +62,6 @@ struct BooksView: View {
                 }
             }
         }
+        .navigationTitle("Books")
     }
 }

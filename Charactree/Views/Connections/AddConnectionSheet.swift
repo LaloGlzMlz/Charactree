@@ -50,7 +50,7 @@ struct AddConnectionSheet: View {
                             .textInputAutocapitalization(.sentences)
                     } label: {
                         Text("\(selectedOption) is \(character.name)'s")
-                            .padding(.trailing, 70)
+                            .padding(.trailing, 50)
                     }
                     
                     if bidireccionalConnectionToggle {
