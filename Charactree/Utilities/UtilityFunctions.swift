@@ -22,7 +22,7 @@ func convertColorToString(bookColor: Color) -> String{
 // executing the app
 var columnLayout: [GridItem] {
     if UIDevice.current.userInterfaceIdiom == .pad {
-        return [GridItem(), GridItem()]
+        return [GridItem(), GridItem(), GridItem(), GridItem()]
     } else {
         return [GridItem(.flexible())]
     }

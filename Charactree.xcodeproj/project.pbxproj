@@ -37,6 +37,7 @@
 		2E188B5B2B908EA8001D97B3 /* SymbolIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E188B5A2B908EA8001D97B3 /* SymbolIcon.swift */; };
 		2E188B5D2B908EBA001D97B3 /* SymbolLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E188B5C2B908EBA001D97B3 /* SymbolLoader.swift */; };
 		2E188B5F2B908ECC001D97B3 /* SymbolsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E188B5E2B908ECC001D97B3 /* SymbolsPicker.swift */; };
+		2E48A6862B91DE72006D73EF /* AltBookCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E48A6852B91DE72006D73EF /* AltBookCard.swift */; };
 		2EC754422B90965A003F4016 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC754412B90965A003F4016 /* CharacterDetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		2E188B5A2B908EA8001D97B3 /* SymbolIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolIcon.swift; sourceTree = "<group>"; };
 		2E188B5C2B908EBA001D97B3 /* SymbolLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolLoader.swift; sourceTree = "<group>"; };
 		2E188B5E2B908ECC001D97B3 /* SymbolsPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolsPicker.swift; sourceTree = "<group>"; };
+		2E48A6852B91DE72006D73EF /* AltBookCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltBookCard.swift; sourceTree = "<group>"; };
 		2EC754412B90965A003F4016 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				2E188B462B908D63001D97B3 /* BookCard.swift */,
+				2E48A6852B91DE72006D73EF /* AltBookCard.swift */,
 				2E188B482B908D79001D97B3 /* BookListCell.swift */,
 				2E188B4A2B908D92001D97B3 /* CharacterCard.swift */,
 				2E188B4C2B908DAE001D97B3 /* CharacterListCell.swift */,
@@ -298,6 +301,7 @@
 				2E188B342B908BE6001D97B3 /* AddCharacterSheet.swift in Sources */,
 				2E188B512B908DDB001D97B3 /* ConnectionListCell.swift in Sources */,
 				2E188B472B908D63001D97B3 /* BookCard.swift in Sources */,
+				2E48A6862B91DE72006D73EF /* AltBookCard.swift in Sources */,
 				2E188B4D2B908DAE001D97B3 /* CharacterListCell.swift in Sources */,
 				2E188B592B908E90001D97B3 /* SearchBar.swift in Sources */,
 				2E188B3F2B908C91001D97B3 /* ConnectionListView.swift in Sources */,
