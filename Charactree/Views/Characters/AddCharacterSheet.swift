@@ -95,7 +95,7 @@ struct AddCharacterSheet: View {
                             name: name,
                             characterTitle: characterTitle,
                             notes: notes,
-                            book: book.title,
+                            book: book,
                             characterColor: characterColorString,
                             icon: icon
                         )

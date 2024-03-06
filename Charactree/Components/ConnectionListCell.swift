@@ -14,7 +14,7 @@ struct ConnectionListCell: View {
     
     var body: some View {
         HStack {
-            Text(connection.relatedCharacter)
+            Text(connection.relatedCharacter.name)
         }
     }
 }

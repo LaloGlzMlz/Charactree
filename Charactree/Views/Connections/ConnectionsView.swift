@@ -12,7 +12,9 @@ import SwiftData
 struct ConnectionsView: View {
     @Environment(\.modelContext) private var context
     
-    @Query(sort: \Connection.relatedCharacter) var connections: [Connection]
+    @Query
+    var connections: [Connection]
+    
     @Query(sort: \BookCharacter.name) var allCharacters: [BookCharacter]
     
     @State private var showingAddConnectionSheet = false
@@ -36,7 +38,7 @@ struct ConnectionsView: View {
                 .padding()
             }
             
-            if !connections.contains(where: { $0.thisCharacter == character.name }) {
+            if !connections.contains(where: { $0.thisCharacter == character }) {
                 ContentUnavailableView(label: {
                     Label("No connection to other characters added", systemImage: "person.line.dotted.person.fill")
                 }, description: {
@@ -48,10 +50,10 @@ struct ConnectionsView: View {
             }
             
             ForEach(connections) { connection in
-                if connection.thisCharacter == character.name {
+                if connection.thisCharacter == character {
                     HStack {
                         ForEach(allCharacters) { characterFromAll in
-                            if connection.relatedCharacter == characterFromAll.name {
+                            if connection.relatedCharacter == characterFromAll {
                                 ConnectionCard(book: book, character: characterFromAll, connection: connection)
                                     .padding(.horizontal)
                             }

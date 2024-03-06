@@ -67,7 +67,7 @@ struct UpdateBookView: View {
                 ToolbarItemGroup(placement: .topBarTrailing) {
                     Button("Done") {
                         for filteredCharacter in filteredCharacters {
-                            filteredCharacter.book = book.title
+                            filteredCharacter.book = book
                         }
                         dismiss()
                     }
@@ -75,7 +75,7 @@ struct UpdateBookView: View {
             }
         }
         .onAppear {
-            filteredCharacters = characters.filter{$0.book == book.title}
+            filteredCharacters = characters.filter{$0.book == book}
         }
     }
     

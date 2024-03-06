@@ -29,7 +29,7 @@ struct UpdateConnectionView: View {
                     }
                 }
             }
-            .navigationTitle("Editing connection with \(connection.relatedCharacter)")
+            .navigationTitle("Editing connection with \(connection.relatedCharacter.name)")
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItemGroup(placement: .topBarTrailing) {

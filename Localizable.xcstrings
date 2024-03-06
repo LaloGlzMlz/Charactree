@@ -1,0 +1,136 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@ is %@'s" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ is %2$@'s"
+          }
+        }
+      }
+    },
+    "Add book" : {
+
+    },
+    "Add connection" : {
+
+    },
+    "Add connections to this character to see them listed here." : {
+
+    },
+    "Add some books to see them listed here." : {
+
+    },
+    "add.character" : {
+      "comment" : "Text for the plus button to add a character in the character view"
+    },
+    "Author" : {
+
+    },
+    "Book title" : {
+
+    },
+    "Books" : {
+
+    },
+    "Cancel" : {
+
+    },
+    "Character" : {
+
+    },
+    "Character name" : {
+
+    },
+    "Character not selected" : {
+
+    },
+    "Character title" : {
+
+    },
+    "Color (color cannot be changed later)" : {
+
+    },
+    "Connection type" : {
+
+    },
+    "Delete" : {
+
+    },
+    "Delete connection with %@" : {
+
+    },
+    "Done" : {
+
+    },
+    "Edit" : {
+
+    },
+    "Edit selected characer" : {
+
+    },
+    "Editing %@" : {
+
+    },
+    "Editing connection with %@" : {
+
+    },
+    "How are they related?" : {
+
+    },
+    "Icon" : {
+
+    },
+    "Name" : {
+
+    },
+    "New book" : {
+
+    },
+    "New character" : {
+
+    },
+    "New connection" : {
+
+    },
+    "No books added" : {
+
+    },
+    "No connection to other characters added" : {
+
+    },
+    "Notes" : {
+
+    },
+    "Related characters" : {
+
+    },
+    "Save" : {
+
+    },
+    "Select a character:" : {
+
+    },
+    "Selected Character" : {
+
+    },
+    "Swipe left to edit or delete books" : {
+
+    },
+    "Swipe left to edit or delete characters" : {
+
+    },
+    "Swipe left to edit or delete connections" : {
+
+    },
+    "Title" : {
+
+    },
+    "Two-way connection?" : {
+
+    }
+  },
+  "version" : "1.0"
+}

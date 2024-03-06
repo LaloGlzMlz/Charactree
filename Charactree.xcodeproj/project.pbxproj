@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E01A7262B989F2200F08212 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 2E01A7252B989F2200F08212 /* Localizable.xcstrings */; };
 		2E188B152B9087A8001D97B3 /* CharactreeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E188B142B9087A8001D97B3 /* CharactreeApp.swift */; };
 		2E188B172B9087A8001D97B3 /* BooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E188B162B9087A8001D97B3 /* BooksView.swift */; };
 		2E188B1B2B9087A9001D97B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E188B1A2B9087A9001D97B3 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E01A7252B989F2200F08212 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		2E188B112B9087A8001D97B3 /* Charactree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Charactree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E188B142B9087A8001D97B3 /* CharactreeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactreeApp.swift; sourceTree = "<group>"; };
 		2E188B162B9087A8001D97B3 /* BooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		2E188B082B9087A8001D97B3 = {
 			isa = PBXGroup;
 			children = (
+				2E01A7252B989F2200F08212 /* Localizable.xcstrings */,
 				2E188B132B9087A8001D97B3 /* Charactree */,
 				2E188B122B9087A8001D97B3 /* Products */,
 			);
@@ -275,6 +278,7 @@
 			files = (
 				2E188B1E2B9087A9001D97B3 /* Preview Assets.xcassets in Resources */,
 				2E188B1B2B9087A9001D97B3 /* Assets.xcassets in Resources */,
+				2E01A7262B989F2200F08212 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

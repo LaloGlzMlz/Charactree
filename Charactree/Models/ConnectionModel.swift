@@ -11,13 +11,17 @@ import SwiftData
 
 @Model
 final class Connection : Identifiable {
-    var relatedCharacter: String = ""
-    var isTo: String = ""
-    var thisCharacter: String = ""
+    @Attribute(.unique)
+    let id: UUID = UUID()
     
-    init(relatedCharacter: String, isTo: String, thisCharacter: String) {
-        self.relatedCharacter = relatedCharacter
-        self.isTo = isTo
+    var thisCharacter: BookCharacter
+    var isTo: String = ""
+    
+    var relatedCharacter: BookCharacter
+    
+    init(thisCharacter: BookCharacter, isTo: String, relatedCharacter: BookCharacter) {
         self.thisCharacter = thisCharacter
+        self.isTo = isTo
+        self.relatedCharacter = relatedCharacter
     }
 }

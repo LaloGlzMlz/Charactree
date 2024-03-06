@@ -22,7 +22,7 @@ struct ConnectionListView: View {
         List {
             Section("Swipe left to edit or delete connections") {
                 ForEach(connections) { connection in
-                    if character.name == connection.thisCharacter { // comment this condition to show all
+                    if character == connection.thisCharacter { // comment this condition to show all
                         ConnectionListCell(connection: connection)
                             .swipeActions {
                                 Button("Delete", role: .destructive) {

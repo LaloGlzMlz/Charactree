@@ -10,7 +10,8 @@ import SwiftData
 import Foundation
 
 struct UpdateCharacterView: View {
-    @Environment(\.dismiss) private var dismiss
+    @Environment(\.dismiss)
+    private var dismiss: DismissAction
     
     @Query(sort: \Connection.relatedCharacter) var connections: [Connection]
     
@@ -75,11 +76,11 @@ struct UpdateCharacterView: View {
                 ToolbarItemGroup(placement: .topBarTrailing) {
                     Button("Done") {
                         for thisCharFilteredConnection in thisCharFilteredConnections {
-                            thisCharFilteredConnection.thisCharacter = character.name
+                            thisCharFilteredConnection.thisCharacter = character
                             
                         }
                         for relatedCharFilteredConnection in relatedCharsFilteredConnections {
-                            relatedCharFilteredConnection.relatedCharacter = character.name
+                            relatedCharFilteredConnection.relatedCharacter = character
                         }
                         dismiss()
                     }
@@ -87,8 +88,8 @@ struct UpdateCharacterView: View {
             }
         }
         .onAppear {
-            thisCharFilteredConnections = connections.filter{$0.thisCharacter == character.name}
-            relatedCharsFilteredConnections = connections.filter{$0.relatedCharacter == character.name}
+            thisCharFilteredConnections = connections.filter{$0.thisCharacter == character}
+            relatedCharsFilteredConnections = connections.filter{$0.relatedCharacter == character}
         }
     }
 }

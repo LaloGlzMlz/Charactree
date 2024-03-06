@@ -22,7 +22,7 @@ struct CharacterListView: View {
         List {
             Section("Swipe left to edit or delete characters") {
                 ForEach(characters) { character in
-                    if character.book == book.title { // comment this condition to show all
+                    if character.book == book { // comment this condition to show all
                         CharacterListCell(character: character)
                             .swipeActions {
                                 Button("Delete", role: .destructive) {

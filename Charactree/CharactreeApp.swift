@@ -11,10 +11,23 @@ import SwiftData
 
 @main
 struct MyApp: App {
+    
+    let modelContainer: ModelContainer
+    
+    init() {
+        
+        do {
+            modelContainer = try ModelContainer(for: Book.self, BookCharacter.self, Connection.self)
+        } catch {
+            fatalError("ModelContainer has not been initialized.")
+        }
+        
+    }
+    
     var body: some Scene {
         WindowGroup {
             BooksView()
         }
-        .modelContainer(for: [Book.self, BookCharacter.self, Connection.self])
+        .modelContainer(modelContainer)
     }
 }
